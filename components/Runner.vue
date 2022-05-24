@@ -79,8 +79,8 @@ export default {
 .inner-bg {
   border-radius: 20px;
   padding: 24px 80px 24px 80px;
-  background-color: rgba(119, 126, 139, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: radial-gradient(12932.03% 512.59% at 52.28% -80.86%, rgba(255, 162, 223, 0.15) 0%, rgba(105, 159, 255, 0.042) 100%), rgba(119, 126, 139, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 24px;
   width: 100%;
 
@@ -112,6 +112,7 @@ export default {
       .runner-progress{
         background: linear-gradient(270deg, #FF4567 -4.07%, #306FE0 47.91%);
         border-radius: 3px;
+        height: 100%;
       }
     }
 

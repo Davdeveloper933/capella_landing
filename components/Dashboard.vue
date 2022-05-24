@@ -2,7 +2,7 @@
   <div class="inner-bg">
     <h3 class="browser-text"> Join Private Round 2</h3>
     <p class="subtitle text-center">Ends in:</p>
-    <CountDown :time_left="1655355742000"></CountDown>
+    <CountDown :time_left="1654655742000"></CountDown>
     <div class="dashboard">
       <div class="item-row">
         <div class="item">
@@ -10,7 +10,7 @@
             Token price
           </p>
           <p class="value text-center">
-            1 CAPE = $0.006
+            1 CAPE = 0.01 $
           </p>
         </div>
       </div>
@@ -36,23 +36,12 @@
         </div>
       </div>
       <div class="item-row">
-        <div class="item half">
+        <div class="item">
           <p class="label">
-            Soft Cap
+            Private round 2
           </p>
           <p class="value">
-            $50,000
-          </p>
-        </div>
-
-        <div style="width: 8px"></div>
-
-        <div class="item half">
-          <p class="label">
-            hard Cap
-          </p>
-          <p class="value">
-            $200,000
+            Vesting Shedule: 12,5% on TGE and 7.29% 12 months
           </p>
         </div>
       </div>
@@ -72,7 +61,7 @@
             Launch Price
           </p>
           <p class="value">
-            $0.02
+            0.020 USDT
           </p>
         </div>
 
@@ -104,7 +93,7 @@
             target
           </p>
           <p class="value">
-            200,000 USDT
+            250,000 USDT
           </p>
         </div>
       </div>
@@ -162,8 +151,8 @@ export default {
 .inner-bg {
   border-radius: 20px;
   padding: 24px 80px 24px 80px;
-  background-color: rgba(119, 126, 139, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: radial-gradient(12932.03% 512.59% at 52.28% -80.86%, rgba(255, 162, 223, 0.15) 0%, rgba(105, 159, 255, 0.042) 100%), rgba(119, 126, 139, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,7 +202,6 @@ export default {
       .item {
         display: flex;
         flex: 1 1 auto;
-        row-gap: 10px;
         flex-direction: column;
         background-color: #1E2041;
         border-radius: 10px;

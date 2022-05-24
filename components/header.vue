@@ -28,8 +28,8 @@
       </div>
       <div class="menu-btn-container site-header-item">
         <div class="site-header-item contact-link-block">
-          <a role="button" href="mailto:contact@capella.finance" class="contact-link">
-            <span class="contact-link__text">Contact@capella.finance</span>
+          <a role="button" href="https://stager.capella.finance/cabinet/dashboard/" class="contact-link">
+            <span class="contact-link__text">Launch App</span>
           </a>
         </div>
       </div>

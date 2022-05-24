@@ -93,10 +93,6 @@ export default {
           img: "twitter",
           url: "https://twitter.com/capellafinance"
         },
-        // {
-        //   img: "fb",
-        //   url: ""
-        // },
         {
           img: "discord",
           url: "https://discord.com/invite/mpMsNyBGw4"
@@ -149,7 +145,7 @@ export default {
     position: relative;
     background-color: rgba(15, 15, 55, 1);
     z-index: 3;
-    margin-top: -20px;
+    margin-top: -40px;
     &__wrapper {
       &-contact {
         display: flex;

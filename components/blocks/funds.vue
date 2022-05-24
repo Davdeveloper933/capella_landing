@@ -2,7 +2,7 @@
   <div ref="section" class="section-funds">
     <a href="#intro-form">
       <ui-button class="section-funds__button">
-        Join Whitelist
+        Join Private Round 2
       </ui-button>
     </a>
     <div class="container">
@@ -76,13 +76,6 @@ export default {
       scrolled: false,
     };
   },
-  // mounted() {
-  //   // eslint-disable-next-line nuxt/no-globals-in-created
-  //   window.addEventListener("scroll", this.handleScroll);
-  // },
-  // destroyed() {
-  //   window.removeEventListener("scroll", this.handleScroll);
-  // },
   methods: {
     handleScroll() {
       this.sectionOffsetTop = this.$refs.section.offsetTop;
@@ -162,20 +155,18 @@ export default {
   &__button {
     padding: 15px 40px;
     z-index: 8888;
-    left: 84vw;
+    left: 81vw;
     position: fixed;
     top: 89%;
+    white-space: nowrap;
     @media screen and (max-width: 1359px) {
-      left: 84vw;
+      left: 79vw;
     }
     @media screen and (max-width: 1200px) {
-      left: 82vw;
+      left: 75vw;
     }
     @media screen and (max-width: 992px) {
       display: none;
-    }
-    &.fixed {
-
     }
   }
   &__steps {
@@ -187,6 +178,10 @@ export default {
       flex-wrap: wrap;
       margin: 2em 0;
       max-width: 90%;
+      @media screen and (min-width: 1920px) {
+        flex-wrap: nowrap;
+        gap: 40px;
+      }
       @media screen and (max-width: 992px) {
         max-width: 100%;
       }

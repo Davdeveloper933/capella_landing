@@ -45,36 +45,18 @@
           </a>
           <!--          </div>-->
           <div class="section-intro__browser__content">
-            <div class="section-intro__browser__content__intro" >
-<!--              <img src="svg/globe.svg" alt="" />-->
-              <h3 class="section-intro__browser__content__title" >
-                Capella Finance the easiest-to-use and most transparent products offering high returns for both beginners and experienced investors.              </h3>
+            <div>
+              <Dashboard v-if="!showByForm" :raised="raised" />
+              <BuyPlane v-if="showByForm" :email="email" :raised="raised"/>
+              <Runner  :raised="raised" :tokens="tokens" />
+              <ui-button class="section-funds__button">
+                Connect Wallet
+              </ui-button>
             </div>
-            <div class="section-intro__browser__content-img">
-              <img src="img/laptop.png" alt="">
-            </div>
-            <div class="section-intro__browser__content-form column">
-              <h3 class="section-intro__browser__content-form__title">
-                Join Whitelist
-              </h3>
-              <div class="section-intro__browser__content-form__wrapper">
-
-                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" v-model="email" :class="{'invalid':isShowError, 'valid':isValid}"/>
-                <ui-button @click="send">Join Whitelist</ui-button>
-              </div>
-              <div class="section-intro__browser__content__timer-buttons">
-                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" />
-                <ui-button @click="send">Join Whitelist</ui-button>
-              </div>
-              <span class="tooltip tooltip-err red" v-show="isShowError">
-                                        * fill in the input field
-               </span>
-              <span v-if="isSend"  style='display: inline-block; margin-top: 10px; font-size: 18px; color: green; text-align: center'>Great! Your request has send!</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -82,17 +64,26 @@
 import UiBtn from "~/components/ui/ui-btn.global";
 import SectionTitle from "~/components/ui/ui-section-title.global";
 import UiButton from "~/components/ui/ui-button.global";
+import Dashboard from '~/components/Dashboard'
+import Runner from '~/components/Runner'
 export default {
   name: "IntroSection",
-  components: {UiButton, UiBtn, SectionTitle },
+  components: { Runner, Dashboard, UiButton, UiBtn, SectionTitle },
   data() {
     return {
+      raised: 250000,
+      tokens: 15000000,
       email: "",
       isSend:false,
-      isShowError:false
+      isShowError:false,
+      showByForm: true,
     }
   },
   methods: {
+    showBuy(email) {
+      this.email = email
+      this.showByForm = true
+    },
     async send(){
       console.log("click")
       if(!this.isValid){
@@ -104,6 +95,7 @@ export default {
       }else{
         this.isShowError = false
         await this.$api.send(this.email)
+        this.showBuy(this.email)
         this.isSend = true
         this.email = ""
       }
@@ -113,13 +105,27 @@ export default {
     isValid() {
       return this.email.length>0 && this.$utils.validateEmailOrTelegram(this.email);
     }
-  }
+  },
+  async mounted() {
+    try {
+      const {data} = await this.$api.raised()
+      this.raised = data.raised
+      this.tokens = data.tokens
+    } catch (e) {
+    }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .section-intro {
   padding-top: 112px;
+  .section-funds__button {
+    margin-top: 30px;
+    @media (max-width: 375px) {
+      width: 100%;
+    }
+  }
 
   .column{
     display: flex;
@@ -538,22 +544,16 @@ export default {
     .spline-right {
       position: absolute;
       right: 0;
-      top: -20vh;
+      top: -6vh;
       z-index: 25;
       width: 19vw;
       @media screen and (max-width: 1199px) {
-        top: -11vh;
       }
       @media screen and (max-width: 850px) {
         width: 15vw;
         top: 6vh;
       }
       @media screen and (max-width: 767px) {
-        //top: 8vh;
-        //right: -4vw;
-        display: none;
-      }
-      @media screen and (max-width: 425px) {
         display: none;
       }
     }
@@ -579,6 +579,7 @@ export default {
     &__inner {
       position: relative;
       width: 69vw;
+      max-width: 996px;
       border-radius: 12px;
       background-image: url('assets/browser_bg.jpg');
       background-repeat: no-repeat;

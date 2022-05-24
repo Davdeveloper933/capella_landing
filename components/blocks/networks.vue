@@ -1,9 +1,5 @@
 <template>
     <div id="networks" class="section-networks section-padding-top section-padding-bottom">
-      <picture>
-        <source media="(max-width: 375px)" srcset="img/neon_small.png" />
-        <img class="neon-img" src="img/neon.png" alt="" />
-      </picture>
       <div class="container">
         <div class="section-networks__top-block">
           <div class="section-networks__top-block__title">
@@ -22,6 +18,7 @@
             <div class="section-networks__cards-item"
                  v-for="(network,indx) in networks"
                  :key="indx"
+                 :class="{'set-transition': !network.comingSoon}"
             >
               <div class="section-networks__cards-item__coming-soon" v-if="network.comingSoon">
                 <div class="section-networks__cards-item__coming-soon blur"></div>
@@ -108,7 +105,7 @@
               {
                 img:"terra-logo",
                 link:"Ethereum.org",
-                name:"Terra",
+                name:"Waves",
                 crypto: "eth",
                 comingSoon: true
               },
@@ -119,7 +116,11 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .set-transition {
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+  }
   .section-networks {
     background-image: radial-gradient(83.55% 202.69% at 96.15% -92.24%, rgba(40, 45, 173, 0.0825) 0%, rgba(20, 15, 55, 0.374) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     position: relative;
@@ -210,9 +211,6 @@
         padding: 16px;
         position: relative;
         cursor: pointer;
-        transition: .3s;
-        -webkit-transition: .3s;
-        -moz-transition: .3s;
         &:hover {
           transform: scale(1.02);
           -webkit-transform: scale(1.02);
@@ -271,9 +269,6 @@
           display: flex;
           justify-content: space-between;
           margin-bottom: 6px;
-          &-img {
-
-          }
           &-link {
             font-weight: 400;
             font-size: 14px;

@@ -44,6 +44,10 @@ export const menuItems = [
     url: "#networks",
   },
   {
+    label: "Partners",
+    url: "#partners",
+  },
+  {
     label: "Contact",
     url: "#contact",
   },

@@ -25,6 +25,7 @@
       <section-road-map id="roadmap" />
       <section-ecosystem id="ecosystem" />
       <section-networks id="networks" />
+      <partners />
     </div>
     <site-footer id="contact" />
   </div>
@@ -44,6 +45,7 @@ import TopBlockchainsSection from "~/components/blocks/topBlockchains";
 import SectionRoadMap from "~/components/blocks/roadMap";
 import SectionEcosystem from "~/components/blocks/ecosystem";
 import SectionNetworks from "~/components/blocks/networks";
+import Partners from '~/components/blocks/partners'
 export default {
   name: "IndexPage",
   data () {
@@ -57,6 +59,7 @@ export default {
     }
   },
   components: {
+    Partners,
     SectionNetworks,
     SectionEcosystem,
     SectionRoadMap,
