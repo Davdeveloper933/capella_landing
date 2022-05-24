@@ -190,8 +190,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
+html, body {
+  overflow-x:hidden;
 }
 
 img {
@@ -206,7 +206,6 @@ body {
   font-weight: 400;
   background-color: #000000;
   background-image: url('./static/img/noize.png');
-  overflow-x: hidden;
 }
 
 .section-title-subtitle {

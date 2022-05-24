@@ -48,10 +48,10 @@
       <div class="item-row">
         <div class="item">
           <p style="margin-bottom: 4px">
-            <span class="label">Stage 1 = </span><span class="value">20,000,000 CAPE @ 0.004 USDT ($80,000)</span>
+            <span class="label">Stage 1 = </span><span class="value">10,000,000 CAPE @ 0.01 USDT ($100,000)</span>
           </p>
           <p>
-            <span class="label">Stage 2 = </span><span class="value">20,000,000 CAPE @ 0.006 USDT ($120,000)</span>
+            <span class="label">Stage 2 = </span><span class="value">12,500,000 CAPE @ 0.012 USDT ($150,000)</span>
           </p>
         </div>
       </div>

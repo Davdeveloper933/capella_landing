@@ -18,7 +18,7 @@ export default {
     meta: [
       {charset: 'utf-8'},
       {property: 'og:type', content: 'website'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no,user-scalable=no,minimal-ui,viewport-fit=cover'},
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
