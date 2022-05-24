@@ -102,7 +102,7 @@ export default {
     }
 
     .runner{
-      width: 100%;
+      width: -webkit-fill-available;
       margin-top: 16px;
       margin-bottom: 10px;
       background-color: #171938;
