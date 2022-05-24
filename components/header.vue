@@ -12,9 +12,9 @@
   >
     <div class="site-header__wrapper">
       <div class="site-header__logo site-header-item site-header__logo-desktop">
-        <a href="/">
+        <nuxt-link to="/">
           <img src="svg/logo.svg" alt="" />
-        </a>
+        </nuxt-link>
       </div>
       <div class="site-header__logo site-header__logo-mobile">
         <a href="/" class="site-header__logo-mobile__link">
