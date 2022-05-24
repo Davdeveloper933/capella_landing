@@ -76,7 +76,7 @@ export default {
       email: "",
       isSend:false,
       isShowError:false,
-      showByForm: true,
+      showByForm: false,
     }
   },
   methods: {
