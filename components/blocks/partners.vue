@@ -37,6 +37,12 @@
           {
             img: 'oyo'
           },
+          {
+            img: 'bosnart'
+          },
+          {
+            img: 'paynt'
+          },
         ]
       }
     }
@@ -47,7 +53,7 @@
   .partners {
     margin-top: -20px;
     position: relative;
-    background-image: url("assets/partners_bg.png");
+    background-image: url("~/assets/partners_bg.png");
     background-size: cover;
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 24px;
@@ -58,13 +64,12 @@
     .cards-wrapper {
       margin-top: 48px;
       display: flex;
-      gap: 20px;
-      @media screen and (max-width: 1200px) {
-        gap: 10px;
+      gap: 10px;
+      @media screen and (max-width: 992px) {
+        flex-wrap: wrap;
       }
       @media screen and (max-width: 576px) {
         flex-wrap: wrap;
-        row-gap: 10px;
         justify-content: center;
       }
       .card {
@@ -76,19 +81,19 @@
         align-items: center;
         width: 25%;
         cursor: pointer;
-        padding: 64px 0;
+        padding: 40px 0;
         transition: .3s all;
         &:hover {
           transform: scale(1.02);
           -webkit-transform: scale(1.02);
         }
-        @media screen and (max-width: 1200px) {
-          padding: 40px 0;
+        @media screen and (max-width: 992px) {
+          width: 30%;
         }
         @media screen and (max-width: 576px) {
           width: 48%;
         }
-        @media screen and (max-width: 420px) {
+        @media screen and (max-width: 375px) {
           width: 100%;
         }
         img {

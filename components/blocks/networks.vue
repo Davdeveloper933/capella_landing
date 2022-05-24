@@ -103,7 +103,7 @@
                 comingSoon: true
               },
               {
-                img:"terra-logo",
+                img:"waves-logo",
                 link:"Ethereum.org",
                 name:"Waves",
                 crypto: "eth",
@@ -211,6 +211,15 @@
         padding: 16px;
         position: relative;
         cursor: pointer;
+        &__top-img {
+          background: rgba(208, 225, 255, 0.08);
+          border-radius: 8px;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         &:hover {
           transform: scale(1.02);
           -webkit-transform: scale(1.02);

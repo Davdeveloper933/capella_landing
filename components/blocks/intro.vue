@@ -122,6 +122,9 @@ export default {
   padding-top: 112px;
   .section-funds__button {
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     @media (max-width: 375px) {
       width: 100%;
     }
@@ -317,6 +320,7 @@ export default {
       padding-right: 20px;
       &>div {
         max-width: 600px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -11,7 +11,7 @@
               <h3 class="site-footer__wrapper-contact__subtitle">
                 Documentation
               </h3>
-              <a href="#"
+              <a href="https://capella-finance-1.gitbook.io/capella.finance/"
                  class="site-footer__wrapper-contact__documentation-item"
               >
                 Governance
@@ -116,6 +116,10 @@ export default {
         {
           img: "instagram",
           url: "https://instagram.com/capella.finance"
+        },
+        {
+          img: "gitbook",
+          url: "https://capella-finance-1.gitbook.io/capella.finance/"
         },
       ]
     }

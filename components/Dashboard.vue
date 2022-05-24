@@ -156,7 +156,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 100% !important;
   @media (max-width: 991px) {
     padding: 24px;
   }
