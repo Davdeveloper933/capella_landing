@@ -25,18 +25,18 @@
     data () {
       return {
         partners: [
-          {
-            img: 'fedex'
-          },
-          {
-            img: 'dpd'
-          },
-          {
-            img: 'google'
-          },
-          {
-            img: 'oyo'
-          },
+          // {
+          //   img: 'fedex'
+          // },
+          // {
+          //   img: 'dpd'
+          // },
+          // {
+          //   img: 'google'
+          // },
+          // {
+          //   img: 'oyo'
+          // },
           {
             img: 'bosnart'
           },
