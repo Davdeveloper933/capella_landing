@@ -72,7 +72,7 @@
             Launch date
           </p>
           <p class="value">
-            Q2 2022
+            Q2-3 2022
           </p>
         </div>
       </div>
@@ -219,6 +219,13 @@ export default {
           margin: 0;
           display: inline-block;
           line-height: 14px;
+          &:last-child {
+            .label {
+              @media screen and (max-width: 506px) {
+                margin-top: 4px;
+              }
+            }
+          }
         }
 
         .label {
@@ -229,6 +236,10 @@ export default {
           text-transform: uppercase;
           vertical-align: middle;
           color: rgba(255, 255, 255, 0.56);
+          @media screen and (max-width: 506px) {
+            display: block;
+            text-align: center;
+          }
         }
 
         .value {
@@ -237,6 +248,10 @@ export default {
           font-size: 14px;
           vertical-align: middle;
           color: #ffffff;
+          @media screen and (max-width: 506px) {
+            display: block;
+            text-align: center;
+          }
         }
       }
     }

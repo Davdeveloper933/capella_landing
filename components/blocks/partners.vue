@@ -10,7 +10,7 @@
       </section-title>
       <div class="cards-wrapper">
         <div class="card" v-for="(partner,indx) in partners" :key="indx">
-          <img :src="`img/partners/${partner.img}.png`" alt="">
+          <img :src="`img/partners/${partner.img}`" alt="">
         </div>
       </div>
     </div>
@@ -38,10 +38,10 @@
           //   img: 'oyo'
           // },
           {
-            img: 'bosnart'
+            img: 'bosnart.png'
           },
           {
-            img: 'paynt'
+            img: 'paynt.svg'
           },
         ]
       }
@@ -98,9 +98,6 @@
         }
         img {
           max-width: 107px;
-          @media screen and (max-width: 1200px) {
-              max-width: 65px;
-          }
         }
       }
     }
@@ -120,7 +117,6 @@
     bottom: -35px;
     transform: translate(-50%,0);
     @media screen and (max-width: 413px) {
-      bottom: -7px;
     }
   }
 </style>
