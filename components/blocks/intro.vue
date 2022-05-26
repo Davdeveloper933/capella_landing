@@ -49,7 +49,7 @@
               <Dashboard v-if="!showByForm" :raised="raised" />
               <BuyPlane v-if="showByForm" :email="email" :raised="raised"/>
               <Runner  :raised="raised" :tokens="tokens" />
-              <ui-button class="section-funds__button">
+              <ui-button @click="showByForm = !showByForm" class="section-funds__button">
                 Connect Wallet
               </ui-button>
             </div>
