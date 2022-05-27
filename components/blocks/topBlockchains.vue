@@ -207,6 +207,12 @@ export default {
     right: 0;
     top: -32%;
     width: 25vw;
+    animation: spline 2s ease-in-out infinite;
+    &::after {
+      content: '';
+      position: absolute;
+      animation: neon 2s ease-in-out infinite
+    }
     @media screen and (max-width: 1240px) {
       top: -15%;
     }

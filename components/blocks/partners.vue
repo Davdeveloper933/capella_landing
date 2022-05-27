@@ -1,17 +1,21 @@
 <template>
   <div id="partners" class="partners  section-padding-top section-padding-bottom">
-    <picture>
-      <source media="(max-width: 375px)" srcset="img/neon_small.png" />
-      <img class="neon-img" src="img/neon.png" alt="" />
-    </picture>
+    <div class="bg circle-bg circle-bg--big">
+      <div>
+        <picture>
+          <source media="(max-width: 375px)" srcset="img/neon_small.png" />
+          <img class="neon-img" src="img/neon.png" alt="" />
+        </picture>
+      </div>
+    </div>
     <div class="container">
       <section-title class="small">
         partners
       </section-title>
       <div class="cards-wrapper">
-        <div class="card" v-for="(partner,indx) in partners" :key="indx">
+        <a target="_blank" :href="partner.url" class="card d-block" v-for="(partner,indx) in partners" :key="indx">
           <img :src="`img/partners/${partner.img}`" alt="">
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -38,10 +42,12 @@
           //   img: 'oyo'
           // },
           {
-            img: 'bosnart.png'
+            img: 'bosnart.png',
+            url: 'https://bosnart.ch/'
           },
           {
-            img: 'paynt.svg'
+            img: 'paynt.svg',
+            url: 'https://paynt.com/'
           },
         ]
       }
@@ -109,14 +115,21 @@
         display: none;
       }
     }
+    .circle-bg--big {
+      bottom: -59px;
+      top: unset;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 375px) {
+        bottom: -70px;
+      }
+    }
   }
 
   .neon-img {
-    position: absolute;
-    left: 50%;
-    bottom: -35px;
     transform: translate(-50%,0);
-    @media screen and (max-width: 413px) {
-    }
+    -webkit-animation: rotation 25s linear infinite;
+    animation: rotation 25s linear infinite;
   }
 </style>

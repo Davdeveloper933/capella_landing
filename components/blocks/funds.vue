@@ -1,7 +1,7 @@
 <template>
   <div ref="section" class="section-funds">
     <a href="#intro-form">
-      <ui-button class="section-funds__button">
+      <ui-button v-if="false" class="section-funds__button">
         Join Private Round 2
       </ui-button>
     </a>
@@ -155,16 +155,11 @@ export default {
   &__button {
     padding: 15px 40px;
     z-index: 8888;
-    left: 81vw;
+    left: unset;
+    right: 30px;
     position: fixed;
-    top: 89%;
+    top: 75%;
     white-space: nowrap;
-    @media screen and (max-width: 1359px) {
-      left: 79vw;
-    }
-    @media screen and (max-width: 1200px) {
-      left: 75vw;
-    }
     @media screen and (max-width: 992px) {
       display: none;
     }

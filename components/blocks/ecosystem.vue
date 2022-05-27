@@ -17,7 +17,8 @@
         </div>
         <div class="section-ecosystem__top-block__question">
           <div class="gradient-line"></div>
-          <h3 class="section-ecosystem__top-block__question__text">Did you ever ask yourself, where should i put my funds today to get the best returns?</h3>
+          <h3 class="section-ecosystem__top-block__question__text">Did you ever ask yourself,where should i put my funds today to get the best returns?
+          </h3>
         </div>
       </div>
       <div class="section-ecosystem__cards">
@@ -116,6 +117,14 @@ export default {
     position: absolute;
     top: 0;
     right: 3%;
+    img:first-child {
+      animation: spline 2s ease-in-out infinite;
+      &::after {
+        content: '';
+        position: absolute;
+        animation: neon 2s ease-in-out infinite
+      }
+    }
     @media screen and (max-width: 1240px) {
       width: 29vw;
     }

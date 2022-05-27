@@ -12,6 +12,7 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
+    'no-irregular-whitespace': 'off',
     'vue/return-in-computed-property':'off',
     'no-console': 'off',
     'no-useless-escape': 0,

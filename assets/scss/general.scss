@@ -10,6 +10,10 @@
   display: inline-block;
 }
 
+.d-block {
+  display: block;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -92,4 +96,52 @@
 
 .text-gray {
   color: rgba(255, 255, 255, 0.56);
+}
+
+.circle-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.circle-bg--big {
+  top: -45px;
+  width: 147px;
+  height: 147px;
+}
+
+@keyframes neon {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spline {
+  0% {
+    opacity: .8;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .8;
+  }
 }

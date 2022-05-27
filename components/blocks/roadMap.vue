@@ -4,8 +4,7 @@
       <div class="section-roadmap__top-block">
         <div class="section-roadmap__top-block__title">
           <section-title class="small" :reversed="true">
-            road
-            <template #normal-text> map </template>
+            road<template #normal-text>map</template>
           </section-title>
         </div>
         <div class="section-roadmap__top-block__question">
@@ -222,6 +221,8 @@ export default {
         max-width: 260px;
         @media screen and (max-width: 992px) {
           max-width: 100%;
+          display: flex;
+          flex-wrap: wrap;
         }
       }
     }

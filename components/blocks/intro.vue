@@ -13,10 +13,14 @@
         </div>
       </h1>
       <div class="section-intro__browser">
-        <picture>
-          <source media="(max-width: 375px)" srcset="img/neon_small.png" />
-          <img class="neon-img" src="img/neon.png" alt="" />
-        </picture>
+        <div class="bg circle-bg circle-bg--big">
+          <div>
+            <picture>
+              <source media="(max-width: 375px)" srcset="img/neon_small.png" />
+              <img class="neon-img" src="img/neon.png" alt="" />
+            </picture>
+          </div>
+        </div>
         <img class="spline-left" src="img/spline_left.png" alt="" />
         <img class="spline-right" src="img/spline_right.png" alt="" />
         <div class="section-intro__browser__inner" id="intro-form">
@@ -250,12 +254,10 @@ export default {
     display: flex;
     justify-content: center;
     position: relative;
-    margin: 40px auto 0 auto;
+    margin: 60px auto 0 auto;
     .neon-img {
-      left: 50%;
-      transform: translate(-50%, 0);
-      position: absolute;
-      top: -4vh;
+      -webkit-animation: rotation 25s linear infinite;
+      animation: rotation 25s linear infinite;
     }
     &-searchbar {
       background: rgba(255, 255, 255, 0.05);
@@ -562,6 +564,14 @@ export default {
         display: none;
       }
     }
+    .spline-left,.spline-right {
+      animation: spline 2s ease-in-out infinite;
+      &::after {
+        content: '';
+        position: absolute;
+        animation: neon 2s ease-in-out infinite
+      }
+    }
     .ellipse {
       position: absolute;
       left: 50%;
@@ -586,9 +596,8 @@ export default {
       width: 69vw;
       max-width: 996px;
       border-radius: 12px;
-      background-image: url('assets/browser_bg.jpg');
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background: radial-gradient(49.51% 49.51% at 50% 8.14%, rgba(178, 96, 230, 0.188) 0%, rgba(0, 0, 0, 0) 100%), rgba(17, 22, 49, 0.57);
+      backdrop-filter: blur(81px);
       @media screen and (max-width: 1200px) {
         width: 78vw;
       }
@@ -597,7 +606,7 @@ export default {
       }
       @media screen and (max-width: 767px) {
         width: 89vw;
-        background-image: url('./static/img/browser_bg-mobile.jpg');
+        /*background-image: url('./static/img/browser_bg-mobile.jpg');*/
       }
       @media screen and (max-width: 425px) {
         width: 100%;

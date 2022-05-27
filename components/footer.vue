@@ -1,5 +1,10 @@
 <template>
   <div class="site-footer">
+    <a href="#intro-form">
+      <ui-button class="section-funds__button" :class="{'set-bottom':scrolledToTheEnd}">
+        Join Private Round 2
+      </ui-button>
+    </a>
     <div class="container">
       <div class="site-footer__wrapper">
         <div class="site-footer__wrapper-contact">
@@ -12,6 +17,7 @@
                 Documentation
               </h3>
               <a href="https://capella-finance-1.gitbook.io/capella.finance/"
+                 target="_blank"
                  class="site-footer__wrapper-contact__documentation-item"
               >
                 Governance
@@ -45,7 +51,9 @@
             </div>
           </div>
         </div>
-        <div class="site-footer__wrapper-copyright">
+        <div class="site-footer__wrapper-copyright"
+             v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+        >
           <div class="site-footer__wrapper-copyright__wrapper">
             <span class="site-footer__wrapper-copyright__wrapper-text">
               Capella Finance 2022 Сopyright
@@ -69,11 +77,18 @@
 <script>
 import PrivacyModal from "~/components/modals/PrivacyModal";
 import TermsModal from "~/components/modals/TermsModal";
+import UiButton from '~/components/ui/ui-button.global'
 export default {
   name: "SiteFooter",
-  components: { TermsModal, PrivacyModal },
+  components: { UiButton, TermsModal, PrivacyModal },
   data () {
     return {
+      scrolledToTheEnd: false,
+      intersectionOptions: {
+        root: null,
+        rootMargin: "0px 0px 0px 0px",
+        threshold: [0.50, 0.50] // [0.25, 0.75] if you want a 25% offset!
+      },
       documentation: [
         {
           text:"Governance",
@@ -136,7 +151,17 @@ export default {
     },
     hideTermsModal () {
       this.$modal.hide("terms-modal");
-    }
+    },
+    onWaypoint ({ going, direction }) {
+      // going: in, out
+      // direction: top, right, bottom, left
+      if (going === "in") {
+        console.log(this.$waypointMap.GOING_IN)
+        this.scrolledToTheEnd = true
+      }else {
+        this.scrolledToTheEnd = false
+      }
+    },
   }
 };
 </script>
@@ -346,5 +371,20 @@ export default {
         margin: 0 auto;
       }
     }
+  }
+  .section-funds__button {
+    padding: 15px 40px;
+    z-index: 8888;
+    left: unset;
+    right: 30px;
+    position: fixed;
+    bottom: 20px;
+    white-space: nowrap;
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+  .set-bottom {
+    bottom: 91px;
   }
 </style>

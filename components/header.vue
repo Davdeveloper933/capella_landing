@@ -28,7 +28,7 @@
       </div>
       <div class="menu-btn-container site-header-item">
         <div class="site-header-item contact-link-block">
-          <a role="button" href="https://stager.capella.finance/cabinet/dashboard/" class="contact-link">
+          <a role="button" target="_blank" href="https://stager.capella.finance/cabinet/dashboard/" class="contact-link">
             <span class="contact-link__text">Launch App</span>
           </a>
         </div>
@@ -62,8 +62,8 @@
         >
           {{ item.label }}
         </a>
-        <a href="#intro-form" @click="closeDesktopMenu">
-          <ui-button>Join Whitelist</ui-button>
+        <a href="https://stager.capella.finance/cabinet/dashboard/" target="_blank">
+          <ui-button>Launch App</ui-button>
         </a>
       </div>
     </div>
@@ -82,8 +82,8 @@
       </div>
       <img class="menu-opened-mobile-line" src="svg/line.svg" alt="" />
       <div class="menu-opened-mobile__buttons">
-        <a href="#intro-form" @click="closeMobileMenu">
-          <ui-button>Join Whitelist</ui-button>
+        <a href="https://stager.capella.finance/cabinet/dashboard/" target="_blank">
+          <ui-button>Launch App</ui-button>
         </a>
         <a href="mailto:contact@capella.finance">
           <ui-button class="menu-opened-mobile__buttons-contact">
@@ -103,8 +103,8 @@
         >
           {{ item.label }}
         </a>
-        <a href="#intro-form" @click="closeDesktopMenu">
-          <ui-button>Join Whitelist</ui-button>
+        <a href="https://stager.capella.finance/cabinet/dashboard/" target="_blank">
+          <ui-button>Launch App</ui-button>
         </a>
         <a href="mailto:contact@capella.finance">
           <ui-button class="menu-opened-mobile__buttons-contact"
