@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fcapella_landing\u002F_nuxt\u002Fstatic\u002F1653678582",layout:"default",error:a,serverRendered:true,routePath:"\u002F",config:{_app:{basePath:"\u002Fcapella_landing\u002F",assetsPath:"\u002Fcapella_landing\u002F_nuxt\u002F",cdnURL:a}}}}(null));
